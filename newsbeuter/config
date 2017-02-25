@@ -1,0 +1,45 @@
+browser "w3m %u"
+auto-reload no
+reload-time 30
+#User agents
+#
+#You may find that some feeds don’t return any information when you use Newsbeuter, probably because# the user agent string it sends is not recognised as an RSS reader. The feed for the Abstruse Goose# comic is an example, as is Toothpaste for Dinner.
+#
+#The easiest way to work around this is to make Newsbeuter identify itself as a better-known RSS rea#der. I’ve found that pretending to be Liferea works:
+#
+#user-agent "Liferea/1.4.14 (Linux; en_US.UTF8; http://liferea.sf.net/)"
+#With this done and Newsbeuter restarted, the feeds seem more willing to yield their items for readi#ng.
+
+
+
+#colours
+#color <element> <foreground color> <background color> [<attribute> ...]
+
+
+#the application background
+#background          white   default 
+#a normal list item, read
+color listnormal          white   default 
+#the currently selected list item
+color listfocus           default  color208   bold 
+#an unread list item
+color listnormal_unread  color208 default 
+#the currently selected and unread list item
+color listfocus_unread    color16 color208   bold 
+#the info bars on top and bottom
+color info                 color16 color208   bold 
+#the article text
+color article             white   default 
+
+#a8a8a8 grey 248
+#ff8700 orange 208
+#000000 practically black 16
+##ffaf00 dark yellow
+
+#navigation
+#These two should keep me happy...
+bind-key k up
+bind-key j down
+
+
+save-path ~/Documents/news
